@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 
+const projects = require('../assets/projects.json');
+const categories = require('../assets/categories.json');
+const tags = require('../assets/tags.json');
+
 export class Category {
   id!: number;
   name!: string;
@@ -36,5 +40,38 @@ export class Project {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular_assignment';
+  title = 'angular_assignment_part1';
+  date = new Date();
+  author = "Sam Van Haren";
+  categories = categories;
+  tags = tags;
+  projects = projects;
+  categoryfilter? : Category | undefined;
+  tagfilter? : Tag | undefined;
+
+  setCategoryFilter(category: Category) {
+    this.categoryfilter = category;
+  }
+
+  setTagFilter(tag: Tag) {
+    this.tagfilter = tag;
+  }
+
+  clearFilters() {
+    this.categoryfilter = undefined;
+    this.tagfilter = undefined;
+  }
+
+  // Check if the project has the tag filter
+  hasTagFilter(tags: Tag[]) {
+    if (this.tagfilter) {
+      for (let tag of tags) {
+        if (tag.id == this.tagfilter?.id) {
+          return true;
+        }
+      }
+      return false;
+    }
+    return false;
+  }
 }
