@@ -51,10 +51,12 @@ export class AppComponent {
 
   setCategoryFilter(category: Category) {
     this.categoryfilter = category;
+    console.log("Category filter set to: " + category.name);
   }
 
   setTagFilter(tag: Tag) {
     this.tagfilter = tag;
+    console.log("Tag filter set to: " + tag.name);
   }
 
   clearFilters() {
@@ -67,11 +69,18 @@ export class AppComponent {
     if (this.tagfilter) {
       for (let tag of tags) {
         if (tag.id == this.tagfilter?.id) {
+          console.log("Tag filter found in project");
           return true;
+          
         }
       }
-      return false;
     }
+    console.log("Tag filter not found in project");
     return false;
+    
+  }
+
+  toggleDivTag(tag: Tag){
+   
   }
 }

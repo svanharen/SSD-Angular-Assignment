@@ -2,24 +2,43 @@
   <h1>{{ title }}</h1>
 </header>
 <main>
-  <div>
     <h2>Projects</h2>
-    
-    <div *ngFor="let project of projects; index as i">
-
-      <div class="project-container" *ngIf="project.category == categoryfilter || hasTagFilter(project.tags)">
-        <h3>{{ project.title }}</h3>
-        <p>{{ project.excerpt }}</p>
-        <p id="categoryPick" *ngIf="project.category"> {{ project.category.name }} </p>
-        <div class="tagPicker" *ngIf="project.tags.length > 0">
-          <p class="tag"*ngFor="let tag of project.tags; index as j">{{ tag.name }}</p>
+    <div class="container">
+      <div class="project-list">
+        <div class="project-container" *ngFor="let project of projects; index as i;" [hidden]=" (categoryfilter && categoryfilter.id != project.category?.id) || (tagfilter && !hasTagFilter(project.tags))">
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.excerpt }}</p>
+          <button id="categoryPick" *ngIf="project.category" (click)="setCategoryFilter(project.category)"> {{ project.category.name }} </button>
+          <div class="tagPicker" *ngIf="project.tags.length > 0">
+            <button class="tag"*ngFor="let tag of project.tags; index as j" (click)="setTagFilter(tag)">{{ tag.name }}</button>
+          </div>
         </div>
       </div>
+      <div class="filter-list">
+        <h2>Filters:</h2>
+        <div>
+          <h3 *ngIf="categoryfilter">Current Category Filter: {{ categoryfilter.name }}</h3>
+        </div>
+        <div>
+          <h3 *ngIf="tagfilter"> Current Tag Filter: {{ tagfilter.name}} </h3>
+        </div>
+        <button id="clearfilters" (click)="clearFilters()">Clear Filters</button>
+        <div class="category-list">
+          <h2>Categories</h2>
+          <div *ngFor="let category of categories">
+            <button id="categoryPick" (click)="setCategoryFilter(category)"> {{ category.name }} </button>
+          </div>
+        </div>
+        <div class="tag-list">
+          <h2>Tags</h2>
+          <div *ngFor="let tag of tags">
+            <button id="tagPick" (click)="setTagFilter(tag)"> {{ tag.name }} </button>
+          </div>
+      </div>
     </div>
-  </div>
-  <div>
-    Filters Section
-  </div>
-
+    </div>
 </main>
 <footer>&#169; {{ author }} {{ date.getFullYear() }}</footer>
+
+
+
