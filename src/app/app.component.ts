@@ -40,7 +40,7 @@ export class Project {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular_assignment_part1';
+  title = "Sam's Showcase";
   date = new Date();
   author = "Sam Van Haren";
   categories = categories;

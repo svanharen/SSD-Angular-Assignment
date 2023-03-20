@@ -1,3 +1,17 @@
+.page{
+    height: 100vh;;
+}
+header {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    color: #333;
+}
+main {
+    background-color: #f1f1f1;
+    
+}
+
 .container {
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -5,9 +19,98 @@
 }
 
 .project-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     padding: 0 10px;
+    
+}
+
+.project-card{
+    align-items: center;
+    padding: 0 10px;
+    margin: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(220, 162, 69, 0.5);
+    max-height: auto;
+}
+
+.button-area{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 0 10px;
+    background-color: #f1f1f1;
+    height: max-content;
+    width: 100%;
 }
 
 .filter-list{
+    text-align: center;
     padding: 0 10px;
+    margin: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(69, 177, 220, 0.5);
+    width: max-content;
 }
+
+.category-list{
+    text-align: center;
+    padding: 0 10px;
+    margin: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(69, 177, 220, 0.5);
+}
+
+.tag-list{
+    padding: 0 10px;
+    margin: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(69, 177, 220, 0.5);
+    text-align: center;
+}
+
+.tag-buttons{
+    margin: 0;
+    padding: 3px;
+}
+
+.category-buttons{
+    margin: 0;
+    padding: 3px;
+
+}
+
+.selected-filters{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    display: block;
+    line-height: 1em; /* a */
+    max-height: 20em;
+}
+
+.button{
+    background-color: transparent;
+    width: 100%;
+}
+.button:hover{
+    background-color: rgba(3, 180, 68, 0.5);
+}
+
+.picker{
+    padding: 2px;
+}
+
+@media(max-width:800px) {
+	.project-list {
+      	display:block;
+      	grid-template-columns: auto;
+      	grid-template-columns: auto;
+  	}
+  	.project-card {
+    	grid-column: auto;
+   	 	grid-row: auto;
+      	margin-bottom:10px;
+	}
+}
+
