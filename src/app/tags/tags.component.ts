@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { TagService } from '../tag.service';
+import { Tag } from '../model/tag';
 
 @Component({
   selector: 'app-tags',
@@ -6,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./tags.component.css']
 })
 export class TagsComponent {
+  constructor(private tagService: TagService) {}
 
+  @Input() tagfilter : Tag | undefined;
+  @Output() newTagFilterEvent = new EventEmitter<Tag>();
+
+  tags: Tag[] = [];
+  getTags(): void {
+    this.tags = this.tagService.getTags();
+  }
+  ngOnInit(): void {
+    this.getTags();
+  }
 }

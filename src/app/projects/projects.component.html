@@ -1,1 +1,15 @@
-<p>projects works!</p>
+<div class="project-list">
+    <!-- Couldnt get projectFilter pipe to work-->
+    <div class="project-card" *ngFor="let project of projects | projectFilter : tagfilter" [hidden]=" (categoryfilter && categoryfilter.id != project.category?.id)">
+      <h3 class="project-card-title">{{ project.title }}</h3>
+      <p>{{ project.excerpt }}</p>
+      <div class="picker">
+        <h4 *ngIf="project.category">Category:</h4>
+      <button class="button categoryPick" *ngIf="project.category" (click)="setCategoryFilter(project.category)"> {{ project.category.name }} </button>
+      </div>
+      <div class="picker" *ngIf="project.tags.length > 0">
+        <h4>Tags:</h4>
+        <button class="button tag"*ngFor="let tag of project.tags; index as j" (click)="setTagFilter(tag)">{{ tag.name }}</button>
+      </div>
+    </div>
+  </div>

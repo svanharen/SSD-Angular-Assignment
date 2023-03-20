@@ -1,51 +1,40 @@
-<div class="page">
-
-
 <header>
   <h1>{{ title }}</h1>
 </header>
 <main>
-    <div class="container">
-      <div class="project-list">
-        <!-- Couldnt get projectFilter pipe to work-->
-        <div class="project-card" *ngFor="let project of projects;" [hidden]=" (categoryfilter && categoryfilter.id != project.category?.id) || (tagfilter && !hasTagFilter(project.tags))">
-          <h3 class="project-card-title">{{ project.title }}</h3>
-          <p>{{ project.excerpt }}</p>
-          <div class="picker">
-            <h4 *ngIf="project.category">Category:</h4>
-          <button class="button categoryPick" *ngIf="project.category" (click)="setCategoryFilter(project.category)"> {{ project.category.name }} </button>
-          </div>
-          <div class="picker" *ngIf="project.tags.length > 0">
-            <h4>Tags:</h4>
-            <button class="button tag"*ngFor="let tag of project.tags; index as j" (click)="setTagFilter(tag)">{{ tag.name }}</button>
-          </div>
-        </div>
+  <section id="side-nav">
+    <article *ngIf="categoryfilter || tagfilter">
+      <h2>Filter:</h2>
+      <div class="current-filter" (click)="clearFilters()">
+        {{ categoryfilter?.name || tagfilter?.name }}
+        <i class="bi bi-trash"></i>
       </div>
-      <div class="button-area">
-        <div class="filter-list">
-          <h2>Filters:</h2>
-          <div class="selected-filters">
-            <p *ngIf="categoryfilter">Current Category Filter:<br> <b>{{ categoryfilter.name }}</b></p>
-            <p *ngIf="tagfilter"> Current Tag Filter:<br> <b>{{ tagfilter.name}}</b> </p>
-          </div>
-          <button class="button" id="clearfilters" (click)="clearFilters()">Clear Filters</button>
-        </div>
-        <div class="category-list">
-          <h2>Categories</h2>
-          <div class="category-buttons" *ngFor="let category of categories">
-            <button class=" button categoryPick" (click)="setCategoryFilter(category)"> {{ category.name }} </button>
-          </div>
-        </div>
-        <div class="tag-list">
-          <h2>Tags</h2>
-          <div class="tag-buttons" *ngFor="let tag of tags">
-            <button class="button tagPick" (click)="setTagFilter(tag)"> {{ tag.name }} </button>
-          </div>
-      </div>
-    </div>
-    </div>
+    </article>
+
+    <h3>Categories</h3>
+    <article id="categories">
+      <app-categories
+        [categoryfilter]="categoryfilter"
+        (newCategoryFilterEvent)="setCategoryFilter($event)"
+      ></app-categories>
+    </article>
+    <h3>Tags</h3>
+    <article id="tags">
+      <app-tags
+        [tagfilter]="tagfilter"
+        (newTagFilterEvent)="setTagFilter($event)"
+      ></app-tags>
+    </article>
+  </section>
+  <section id="projects">
+    <app-projects
+      [categoryfilter]="categoryfilter"
+      (newCategoryFilterEvent)="setCategoryFilter($event)"
+      [tagfilter]="tagfilter"
+      (newTagFilterEvent)="setTagFilter($event)"
+    ></app-projects>
+  </section>
 </main>
-<footer>&#169; {{ author }} {{ date.getFullYear() }}</footer>
-</div>
+<footer>&copy; {{ date.getFullYear() }} {{ author }}</footer>
 
 

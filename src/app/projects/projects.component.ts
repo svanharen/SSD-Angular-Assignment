@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { ProjectService } from '../project.service';
+import { Project } from '../model/project';
+import { Category } from '../model/category';
+import { Tag } from '../model/tag';
 
 @Component({
   selector: 'app-projects',
@@ -6,5 +10,33 @@ import { Component } from '@angular/core';
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent {
+  constructor(private projectService: ProjectService) {}
 
+  @Input() categoryfilter : Category | undefined;
+  @Output() newCategoryFilterEvent = new EventEmitter<Category>();
+  @Input() tagfilter : Tag | undefined;
+  @Output() newTagFilterEvent = new EventEmitter<Tag>();
+
+  setCategoryFilter(category: Category) {
+    this.categoryfilter = category;
+    this.newCategoryFilterEvent.emit(category);
+  }
+
+  setTagFilter(tag: Tag) {
+    this.tagfilter = tag;
+  }
+
+  clearFilters() {
+    this.categoryfilter = undefined;
+    this.tagfilter = undefined;
+  }
+  projects: Project[] = [];
+  getProjects(): void {
+    this.projects = this.projectService.getProjects();
+  }
+  ngOnInit(): void {
+    this.getProjects();
+  }
+
+  
 }
