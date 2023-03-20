@@ -7,7 +7,8 @@
 <main>
     <div class="container">
       <div class="project-list">
-        <div class="project-card" *ngFor="let project of projects; index as i;" [hidden]=" (categoryfilter && categoryfilter.id != project.category?.id) || (tagfilter && !hasTagFilter(project.tags))">
+        <!-- Couldnt get projectFilter pipe to work-->
+        <div class="project-card" *ngFor="let project of projects;" [hidden]=" (categoryfilter && categoryfilter.id != project.category?.id) || (tagfilter && !hasTagFilter(project.tags))">
           <h3 class="project-card-title">{{ project.title }}</h3>
           <p>{{ project.excerpt }}</p>
           <div class="picker">
