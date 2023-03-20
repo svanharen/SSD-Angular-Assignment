@@ -30,5 +30,10 @@ export const TAGS: Tag[] = [
         "id": 6,
         "name": "Python",
         "slug": "python"
+    },
+    {
+        "id": 7,
+        "name": "JavaScript",
+        "slug": "javascript"
     }
 ]

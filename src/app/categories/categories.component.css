@@ -1,0 +1,30 @@
+.category-list{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: left;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.button{
+    background-color: rgba(97, 230, 230, 0.5);
+    padding: 10px;
+}
+
+.button:hover{
+    background-color: rgba(3, 180, 68, 0.5);
+}
+
+.heading{
+    vertical-align: middle;
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    .heading{
+        text-align: left;
+    }
+    
+}

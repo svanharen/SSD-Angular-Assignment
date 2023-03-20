@@ -1,1 +1,6 @@
-<p>categories works!</p>
+<h3 class="heading">Categories</h3>
+<div class="category-list">
+    <div class="category-card" *ngFor="let category of categories">
+        <button class="button" (click)="setCategoryFilter(category)"> {{ category.name }} </button>
+    </div>
+</div>

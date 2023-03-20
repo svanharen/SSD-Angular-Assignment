@@ -1,0 +1,62 @@
+.project-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 10px;
+    
+}
+
+.project-card{
+    text-align: center;
+    padding: 0 10px;
+    margin: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-image: url("https://www.myfreetextures.com/wp-content/uploads/2014/10/book6.jpg");
+    background-size: cover;
+    max-height: auto;
+}
+
+.excerpt{
+    margin-left: 5em;
+    margin-right: 5em;
+    text-align: center;
+}
+
+.project-card-title{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px;
+    background-color:rgba(220, 162, 69, 0.2);
+    
+}
+
+.button{
+    background-color: transparent;
+    width: max-content;
+    margin-bottom: 5px;
+}
+
+.button:hover{
+    background-color: rgba(3, 180, 68, 0.5);
+}
+
+@media screen and ( max-width:1000px) {
+	.project-list {
+      	display:block;
+      	grid-template-columns: auto;
+      	grid-template-columns: auto;
+        
+  	}
+  	.project-card {
+    	grid-column: auto;
+   	 	grid-row: auto;
+        margin: auto;
+        max-width: 68%;
+       
+	}
+
+    .excerpt{
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+
+}

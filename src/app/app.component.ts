@@ -33,19 +33,5 @@ export class AppComponent {
     this.tagfilter = undefined;
   }
 
-  // Check if the project has the tag filter
-  /* hasTagFilter(tags: Tag[]) {
-    if (this.tagfilter) {
-      for (let tag of tags) {
-        if (tag.id == this.tagfilter?.id) {
-          console.log("Tag filter found in project");
-          return true;
-          
-        }
-      }
-    }
-    console.log("Tag filter not found in project");
-    return false;
     
-  } */
 }

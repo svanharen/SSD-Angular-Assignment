@@ -1,1 +1,5 @@
-<p>tags works!</p>
+<h3 class="heading">Tags</h3>
+<div class="tag-list">
+  <div class="tag-card" *ngFor="let tag of tags">
+    <button class="button" (click)="setTagFilter(tag)"> {{ tag.name }} </button>
+  </div>
