@@ -58,7 +58,13 @@ export const PROJECTS: Project[] = [
             "slug": "back-end",
             "name": "Back End"
         },
-        "tags": []
+        "tags": [
+            {
+                "id": 2,
+                "name": "Node.js",
+                "slug": "nodejs",
+            },
+        ]
     },
     {
         "id": 3,
@@ -73,8 +79,18 @@ export const PROJECTS: Project[] = [
         "category_id": null,
         "created_at": "2023-03-19T01:18:55.000000Z",
         "updated_at": "2023-03-19T01:18:55.000000Z",
-        "category": null,
-        "tags": []
+        "category": {
+            "id": 2,
+            "slug": "front-end",
+            "name": "Front End"
+        },
+        "tags": [
+            {
+                "id": 4,
+                "name": "React",
+                "slug": "react"
+            },
+        ]
     },
     {
         "id": 4,
@@ -94,7 +110,13 @@ export const PROJECTS: Project[] = [
             "slug": "front-end",
             "name": "Front End"
         },
-        "tags": []
+        "tags": [
+            {
+                "id": 8,
+                "name": "SASS",
+                "slug": "sass"
+            },
+        ]
     },
     {
         "id": 5,
@@ -114,7 +136,13 @@ export const PROJECTS: Project[] = [
             "slug": "front-end",
             "name": "Front End"
         },
-        "tags": []
+        "tags": [
+            {
+                "id": 7,
+                "name": "JavaScript",
+                "slug": "javascript"
+            }
+        ]
     },
     {
         "id": 6,
@@ -129,23 +157,11 @@ export const PROJECTS: Project[] = [
         "category_id": null,
         "created_at": "2023-03-19T01:18:55.000000Z",
         "updated_at": "2023-03-19T01:18:55.000000Z",
-        "category": null,
-        "tags": []
-    },
-    {
-        "id": 7,
-        "title": "Android App",
-        "slug": "android-app",
-        "excerpt": "Voluptatem cumque impedit voluptatem quia quod. Cum fuga quia minima necessitatibus et voluptatem voluptas.",
-        "body": "<p>Quidem aut ducimus dicta possimus. Magni quo minima in. Pariatur enim et iste similique quia vitae minima. Ipsum distinctio tempore consequatur a.</p></p>Quos veritatis sunt eum quas. Perspiciatis aut est suscipit odio aliquam et ea.</p></p>Corporis soluta aut vel dolores velit iste illum. Iusto eum deserunt asperiores. Sequi rerum corporis enim nobis molestiae esse deserunt voluptatem. Veniam voluptatem reiciendis provident.</p>",
-        "url": null,
-        "published_date": null,
-        "image": null,
-        "thumb": null,
-        "category_id": null,
-        "created_at": "2023-03-19T01:18:55.000000Z",
-        "updated_at": "2023-03-19T01:18:55.000000Z",
-        "category": null,
+        "category": {
+            "id": 3,
+            "slug": "full-stack",
+            "name": "Full Stack"
+        },
         "tags": []
     },
     {
@@ -166,6 +182,17 @@ export const PROJECTS: Project[] = [
             "slug": "full-stack",
             "name": "Full Stack"
         },
-        "tags": []
+        "tags": [
+            {
+                "id": 5,
+                "name": "C#",
+                "slug": "csharp"
+            },
+            {
+                "id": 7,
+                "name": "JavaScript",
+                "slug": "javascript"
+            }
+        ]
     }
 ]

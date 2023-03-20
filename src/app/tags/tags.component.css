@@ -13,6 +13,10 @@
     padding: 10px;
 }
 
+.button:hover{
+    background-color: rgba(3, 180, 68, 0.5);
+}
+
 .heading{
     text-align: center;
     vertical-align: middle;
