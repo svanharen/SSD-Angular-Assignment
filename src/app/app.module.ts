@@ -3,12 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
+import { ProjectFilterPipe } from './project-filter.pipe';
+import { ProjectsComponent } from './projects/projects.component';
+import { TagsComponent } from './tags/tags.component';
+import { CategoriesComponent } from './categories/categories.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProjectFilterPipe,
+    ProjectsComponent,
+    TagsComponent,
+    CategoriesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

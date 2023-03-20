@@ -1,0 +1,210 @@
+import { Project } from '../model/project';
+
+export const PROJECTS: Project[] = [
+    {
+        "id": 1,
+        "title": "Portfolio Showcase",
+        "slug": "portfolio-showcase",
+        "excerpt": "Fuga et eos sit vel impedit quia eum a. Quis eum rerum quia omnis perferendis distinctio.",
+        "body": "<p>Inventore non voluptate reiciendis nemo qui. Laboriosam sed commodi et enim a saepe. Eligendi et provident deserunt et voluptas tenetur.</p></p>Repellat minima iste aut voluptatem iure illo qui. Quis dolores quis voluptatem sequi. Ipsam ut rem magnam modi omnis omnis.</p></p>Ut sunt fugit sit ut et. Itaque ab nulla et dolores autem et dolores. Quo blanditiis quasi ut voluptatibus. Sint dolore quod deserunt enim et nihil.</p></p>Voluptas error impedit quaerat exercitationem. Exercitationem corrupti voluptate aliquid voluptates et aut. Commodi id velit reiciendis laborum.</p>",
+        "url": null,
+        "published_date": null,
+        "image": null,
+        "thumb": null,
+        "category_id": 3,
+        "created_at": "2023-03-19T01:18:55.000000Z",
+        "updated_at": "2023-03-19T01:18:55.000000Z",
+        "category": {
+            "id": 3,
+            "slug": "full-stack",
+            "name": "Full Stack"
+        },
+        "tags": [
+            {
+                "id": 1,
+                "name": "PHP",
+                "slug": "php",
+                "pivot": {
+                    "projects_id": 1,
+                    "tags_id": 1
+                }
+            },
+            {
+                "id": 3,
+                "name": "Laravel",
+                "slug": "laravel",
+                "pivot": {
+                    "projects_id": 1,
+                    "tags_id": 3
+                }
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "SSD Yearbook",
+        "slug": "ssd-yearbook",
+        "excerpt": "Facere exercitationem in deserunt qui et. Harum aut vitae similique omnis.",
+        "body": "<p>Soluta vel corporis nesciunt. Quis molestiae veritatis ea praesentium incidunt quasi. Libero modi quaerat velit inventore. Dolorem voluptate enim praesentium dolores rerum provident sed. Voluptatem voluptatem voluptatem optio nostrum incidunt ab tenetur et.</p></p>Alias odio incidunt corporis numquam ab veritatis. Et soluta laboriosam nemo natus dolor magnam et id. Molestias consequatur placeat quisquam et quia excepturi omnis blanditiis. Labore omnis sunt saepe omnis minima.</p></p>Sunt ex beatae quia. Odit molestiae cupiditate corporis eaque. Maiores vitae eligendi corrupti ab.</p>",
+        "url": null,
+        "published_date": null,
+        "image": null,
+        "thumb": null,
+        "category_id": 1,
+        "created_at": "2023-03-19T01:18:55.000000Z",
+        "updated_at": "2023-03-19T01:18:55.000000Z",
+        "category": {
+            "id": 1,
+            "slug": "back-end",
+            "name": "Back End"
+        },
+        "tags": []
+    },
+    {
+        "id": 3,
+        "title": "Movie App",
+        "slug": "movie-app",
+        "excerpt": "Modi et sit omnis ut aut dolores. Explicabo quibusdam laudantium ut voluptas recusandae dicta.",
+        "body": "<p>Culpa nobis modi repudiandae fugit quia optio ut. Qui omnis odio officiis temporibus. Cupiditate vitae quia ut est.</p></p>Voluptatem vel debitis qui recusandae. Eos ut nesciunt ea. Et facilis sint ab ducimus aperiam.</p></p>Et quia delectus qui omnis. Odio beatae corrupti qui aliquam et iure. Qui voluptates et facere dolores sed molestiae modi. A quas expedita ut quas qui perferendis voluptates adipisci.</p></p>Aut ad debitis recusandae possimus. Iusto voluptatem velit et. Temporibus ut ducimus ratione accusamus eum.</p></p>Explicabo molestiae deleniti beatae quae quas consequatur. Suscipit est doloribus ea rerum in. Quibusdam illo ratione qui iusto a et. Voluptas tempore et eum earum.</p>",
+        "url": null,
+        "published_date": null,
+        "image": null,
+        "thumb": null,
+        "category_id": null,
+        "created_at": "2023-03-19T01:18:55.000000Z",
+        "updated_at": "2023-03-19T01:18:55.000000Z",
+        "category": null,
+        "tags": []
+    },
+    {
+        "id": 4,
+        "title": "News Site Homepage",
+        "slug": "news-site-homepage",
+        "excerpt": "Sunt autem odio quia explicabo quas ipsum ipsam. Rerum asperiores aliquid porro quibusdam.",
+        "body": "<p>Incidunt consequuntur qui veritatis. Esse voluptatibus ratione corrupti harum id porro occaecati voluptates. Suscipit amet quibusdam velit nisi. Eius eaque sint laboriosam ullam dolores earum qui.</p></p>Culpa cumque animi repudiandae et et incidunt aut. Tempora eaque et doloremque magnam. Exercitationem ex illo minus velit tempore.</p></p>Et iste earum voluptatibus vero autem voluptates. Sit vitae quo ducimus pariatur. Minus blanditiis voluptatibus culpa sunt consequatur. Consectetur consectetur molestias sed atque veritatis voluptas.</p>",
+        "url": null,
+        "published_date": null,
+        "image": null,
+        "thumb": null,
+        "category_id": 2,
+        "created_at": "2023-03-19T01:18:55.000000Z",
+        "updated_at": "2023-03-19T01:18:55.000000Z",
+        "category": {
+            "id": 2,
+            "slug": "front-end",
+            "name": "Front End"
+        },
+        "tags": []
+    },
+    {
+        "id": 5,
+        "title": "JavaScript Game",
+        "slug": "javascript-game",
+        "excerpt": "Eaque et qui veniam maxime aut. Velit iure et delectus est facilis voluptas.",
+        "body": "<p>Fuga fugiat nemo sint libero accusamus cum. Voluptas iure enim ut est repellat consequatur. Cum omnis aut nihil est.</p></p>Sint est ut iure blanditiis. Quia ullam et qui deserunt natus.</p></p>Quisquam est itaque temporibus eos. Assumenda et eius quo est. Aut et animi ut rerum vero ex. Sed iusto qui aut.</p>",
+        "url": null,
+        "published_date": null,
+        "image": null,
+        "thumb": null,
+        "category_id": 2,
+        "created_at": "2023-03-19T01:18:55.000000Z",
+        "updated_at": "2023-03-19T01:18:55.000000Z",
+        "category": {
+            "id": 2,
+            "slug": "front-end",
+            "name": "Front End"
+        },
+        "tags": []
+    },
+    {
+        "id": 6,
+        "title": "iOS App",
+        "slug": "ios-app",
+        "excerpt": "Laborum nesciunt mollitia sed ea minus. Perspiciatis et cum eveniet sequi fugit voluptatem debitis.",
+        "body": "<p>Corporis eius sint quia earum eum ut qui. Neque at unde reiciendis. Voluptate quis voluptatibus ipsum adipisci est.</p></p>Officia nisi recusandae illo voluptatum id. Rerum et consequuntur ut et consectetur expedita beatae vitae. Autem veniam est optio ut. Qui eveniet atque culpa eos neque qui recusandae.</p></p>Qui iusto repudiandae ducimus quibusdam amet. Tempore quia qui delectus quis earum voluptatem dicta. Voluptatibus totam dolore praesentium tempora nesciunt cumque voluptatem. Labore odio iste cum quia est magnam voluptatem. Expedita itaque molestias sunt autem.</p>",
+        "url": null,
+        "published_date": null,
+        "image": null,
+        "thumb": null,
+        "category_id": null,
+        "created_at": "2023-03-19T01:18:55.000000Z",
+        "updated_at": "2023-03-19T01:18:55.000000Z",
+        "category": null,
+        "tags": []
+    },
+    {
+        "id": 7,
+        "title": "Android App",
+        "slug": "android-app",
+        "excerpt": "Voluptatem cumque impedit voluptatem quia quod. Cum fuga quia minima necessitatibus et voluptatem voluptas.",
+        "body": "<p>Quidem aut ducimus dicta possimus. Magni quo minima in. Pariatur enim et iste similique quia vitae minima. Ipsum distinctio tempore consequatur a.</p></p>Quos veritatis sunt eum quas. Perspiciatis aut est suscipit odio aliquam et ea.</p></p>Corporis soluta aut vel dolores velit iste illum. Iusto eum deserunt asperiores. Sequi rerum corporis enim nobis molestiae esse deserunt voluptatem. Veniam voluptatem reiciendis provident.</p>",
+        "url": null,
+        "published_date": null,
+        "image": null,
+        "thumb": null,
+        "category_id": null,
+        "created_at": "2023-03-19T01:18:55.000000Z",
+        "updated_at": "2023-03-19T01:18:55.000000Z",
+        "category": null,
+        "tags": []
+    },
+    {
+        "id": 8,
+        "title": "Industry Project",
+        "slug": "industry-project",
+        "excerpt": "Sit error quia distinctio. Ut sed unde quidem aut unde.",
+        "body": "<p>Quos ratione suscipit mollitia. Dolores animi est dignissimos. Asperiores voluptatum laudantium et quia.</p></p>Et expedita sunt facere cum aut. Soluta omnis occaecati suscipit tenetur. Earum sit sapiente necessitatibus voluptate quia veniam. Officia ratione modi voluptate perferendis enim vero.</p></p>Quia veritatis et maxime et. Consequatur architecto quis aliquam eos iusto consequatur. Voluptates ut et dolorum soluta autem voluptas.</p></p>Eaque ut dolorum commodi consequatur ab. Aut illo enim beatae sint in et praesentium. Soluta tempora possimus labore.</p></p>Dolores sit consequatur nihil placeat qui aut laudantium. Minima ex ea eligendi. Facilis recusandae quos natus corporis rerum dolore temporibus. Aut fugit ea est eaque saepe facilis.</p></p>Aliquid totam sed dolorem sed dolore. Eveniet sint dicta rem amet qui. Omnis expedita ipsam ut animi.</p>",
+        "url": null,
+        "published_date": null,
+        "image": null,
+        "thumb": null,
+        "category_id": 3,
+        "created_at": "2023-03-19T01:18:55.000000Z",
+        "updated_at": "2023-03-19T01:18:55.000000Z",
+        "category": {
+            "id": 3,
+            "slug": "full-stack",
+            "name": "Full Stack"
+        },
+        "tags": []
+    },
+    {
+        "id": 9,
+        "title": "Tag Test",
+        "slug": "tag-test",
+        "excerpt": "tse",
+        "body": "test",
+        "url": null,
+        "published_date": null,
+        "image": null,
+        "thumb": null,
+        "category_id": 1,
+        "created_at": "2023-03-19T01:21:44.000000Z",
+        "updated_at": "2023-03-19T01:21:44.000000Z",
+        "category": {
+            "id": 1,
+            "slug": "back-end",
+            "name": "Back End"
+        },
+        "tags": [
+            {
+                "id": 1,
+                "name": "PHP",
+                "slug": "php",
+                "pivot": {
+                    "projects_id": 9,
+                    "tags_id": 1
+                }
+            },
+            {
+                "id": 6,
+                "name": "Python",
+                "slug": "python",
+                "pivot": {
+                    "projects_id": 9,
+                    "tags_id": 6
+                }
+            }
+        ]
+    }
+]
