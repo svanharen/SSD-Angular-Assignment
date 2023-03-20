@@ -24,6 +24,7 @@ export class ProjectsComponent {
 
   setTagFilter(tag: Tag) {
     this.tagfilter = tag;
+    this.newTagFilterEvent.emit(tag);
   }
 
   clearFilters() {
@@ -36,6 +37,21 @@ export class ProjectsComponent {
   }
   ngOnInit(): void {
     this.getProjects();
+  }
+
+  hasTagFilter(tags: Tag[]) {
+    if (this.tagfilter) {
+      for (let tag of tags) {
+        if (tag.id == this.tagfilter?.id) {
+          console.log("Tag filter found in project");
+          return true;
+          
+        }
+      }
+    }
+    console.log("Tag filter not found in project");
+    return false;
+    
   }
 
   

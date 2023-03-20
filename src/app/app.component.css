@@ -6,10 +6,10 @@ header {
     padding: 10px;
     text-align: center;
     color: #333;
+    border: solid 1px #333;
 }
 main {
     background-color: #f1f1f1;
-    
 }
 
 .container {
@@ -17,23 +17,6 @@ main {
     grid-template-columns: 3fr 1fr;
     padding: 0 10px;
 }
-
-.project-list{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 0 10px;
-    
-}
-
-.project-card{
-    text-align: center;
-    padding: 0 10px;
-    margin: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: rgba(220, 162, 69, 0.5);
-    max-height: auto;
-}
-
 .button-area{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -91,7 +74,7 @@ main {
 
 .button{
     background-color: transparent;
-    width: 100%;
+    width: auto;
 }
 .button:hover{
     background-color: rgba(3, 180, 68, 0.5);
@@ -99,6 +82,19 @@ main {
 
 .picker{
     padding: 2px;
+}
+
+#side-nav{
+   display: flex;
+   justify-content: space-between;
+}
+
+footer{
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    color: #333;
+    bottom: 0;
 }
 
 @media(max-width:800px) {
@@ -112,5 +108,9 @@ main {
    	 	grid-row: auto;
       	margin-bottom:10px;
 	}
+    #side-nav{
+        display: flex;
+        flex-direction: column;
+    }
 }
 

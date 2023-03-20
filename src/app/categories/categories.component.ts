@@ -13,9 +13,10 @@ export class CategoriesComponent {
   @Input() categoryfilter : Category | undefined;
   @Output() newCategoryFilterEvent = new EventEmitter<Category>();
 
-  categoryFilter: Category | undefined;
+
   setCategoryFilter(category: Category) {
-    this.categoryFilter = category;
+    this.categoryfilter = category;
+    this.newCategoryFilterEvent.emit(category);
   }  
 
   categories: Category[] = [];

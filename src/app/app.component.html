@@ -4,21 +4,19 @@
 <main>
   <section id="side-nav">
     <article *ngIf="categoryfilter || tagfilter">
-      <h2>Filter:</h2>
-      <div class="current-filter" (click)="clearFilters()">
-        {{ categoryfilter?.name || tagfilter?.name }}
+      <h2>Filter(s):</h2>
+      <div class="current-filter">
+        {{ categoryfilter?.name }} {{ tagfilter?.name }}
+        <button class="button" (click)="clearFilters()"> Clear Filter</button>
         <i class="bi bi-trash"></i>
       </div>
     </article>
-
-    <h3>Categories</h3>
     <article id="categories">
       <app-categories
         [categoryfilter]="categoryfilter"
         (newCategoryFilterEvent)="setCategoryFilter($event)"
       ></app-categories>
     </article>
-    <h3>Tags</h3>
     <article id="tags">
       <app-tags
         [tagfilter]="tagfilter"

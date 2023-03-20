@@ -5,8 +5,8 @@ export const PROJECTS: Project[] = [
         "id": 1,
         "title": "Portfolio Showcase",
         "slug": "portfolio-showcase",
-        "excerpt": "Fuga et eos sit vel impedit quia eum a. Quis eum rerum quia omnis perferendis distinctio.",
-        "body": "<p>Inventore non voluptate reiciendis nemo qui. Laboriosam sed commodi et enim a saepe. Eligendi et provident deserunt et voluptas tenetur.</p></p>Repellat minima iste aut voluptatem iure illo qui. Quis dolores quis voluptatem sequi. Ipsam ut rem magnam modi omnis omnis.</p></p>Ut sunt fugit sit ut et. Itaque ab nulla et dolores autem et dolores. Quo blanditiis quasi ut voluptatibus. Sint dolore quod deserunt enim et nihil.</p></p>Voluptas error impedit quaerat exercitationem. Exercitationem corrupti voluptate aliquid voluptates et aut. Commodi id velit reiciendis laborum.</p>",
+        "excerpt": "A different version of this very showcase, but using PHP and Laravel.",
+        "body": "<p>Built during my time at BCIT in the SSD program....</p>",
         "url": null,
         "published_date": null,
         "image": null,
@@ -167,44 +167,5 @@ export const PROJECTS: Project[] = [
             "name": "Full Stack"
         },
         "tags": []
-    },
-    {
-        "id": 9,
-        "title": "Tag Test",
-        "slug": "tag-test",
-        "excerpt": "tse",
-        "body": "test",
-        "url": null,
-        "published_date": null,
-        "image": null,
-        "thumb": null,
-        "category_id": 1,
-        "created_at": "2023-03-19T01:21:44.000000Z",
-        "updated_at": "2023-03-19T01:21:44.000000Z",
-        "category": {
-            "id": 1,
-            "slug": "back-end",
-            "name": "Back End"
-        },
-        "tags": [
-            {
-                "id": 1,
-                "name": "PHP",
-                "slug": "php",
-                "pivot": {
-                    "projects_id": 9,
-                    "tags_id": 1
-                }
-            },
-            {
-                "id": 6,
-                "name": "Python",
-                "slug": "python",
-                "pivot": {
-                    "projects_id": 9,
-                    "tags_id": 6
-                }
-            }
-        ]
     }
 ]

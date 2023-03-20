@@ -12,6 +12,13 @@ export class TagsComponent {
 
   @Input() tagfilter : Tag | undefined;
   @Output() newTagFilterEvent = new EventEmitter<Tag>();
+  
+
+  setTagFilter(tag: Tag) {
+    this.tagfilter = tag;
+    this.newTagFilterEvent.emit(tag);
+    console.log("Tag filter set to " + tag.name);
+  }
 
   tags: Tag[] = [];
   getTags(): void {

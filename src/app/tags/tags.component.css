@@ -1,0 +1,28 @@
+.tag-list{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: left;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.button{
+    background-color: rgba(97, 230, 230, 0.5);
+    padding: 10px;
+}
+
+.heading{
+    text-align: center;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 800px) {
+    .heading{
+        text-align: left;
+    }
+    
+}
+
+

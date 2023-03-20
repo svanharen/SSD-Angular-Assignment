@@ -15,5 +15,10 @@ export const CATEGORIES: Category[] = [
         "id": 3,
         "slug": "full-stack",
         "name": "Full Stack"
+    },
+    {
+        "id": 4,
+        "slug": "data-analysis",
+        "name": "Data Analysis"
     }
 ]
